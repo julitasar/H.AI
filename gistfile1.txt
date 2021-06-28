@@ -1,9 +1,8 @@
-user_input = input(f"Welcome to Hello AI, please enter your name below\n")
+user_input = input(f"Welcome to Hello AI, please enter your name below\n")  # prompt message shown to user
 
-
-if user_input .isalpha():
-    print(f"Hello {user_input}!")
-elif user_input .isspace():
+if user_input.isalpha():
+    print(f"Hello {user_input}!")  # default message for valid name (letters A to Z)
+elif user_input.isspace() or user_input == "":
     print("You think you are smarter than me? Type only letters!")
 else:
     print(f"{user_input} is not a valid name, please use only letters!")
