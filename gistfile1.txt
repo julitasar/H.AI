@@ -1,3 +1,5 @@
+from datetime import datetime
+
 user_input = input(f"Welcome to Hello AI, please enter your name below\n")  # prompt message shown to user
 
 if user_input.isalpha():
@@ -6,3 +8,15 @@ elif user_input.isspace() or user_input == "":
     print("You think you are smarter than me? Type only letters!")
 else:
     print(f"{user_input} is not a valid name, please use only letters!")
+
+    # now, my attempt to write and read names from a list
+
+list2 = [user_input]
+
+print(list2, datetime.today())
+my_list = f"name: {list2}, {datetime.today()}, \n"
+f = open("saved_names.txt", "a")
+f.write(my_list)
+
+# while user_input !="exit":
+# user_input.split(" ")
